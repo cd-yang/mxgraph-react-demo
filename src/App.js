@@ -1,12 +1,13 @@
 import './App.css';
-import MyMxGraph from './components/MyMxGraph';
+import 'mxgraph/javascript/src/css/common.css';
+import MxGraphClass from './components/MxGraphClass';
+import MxGraphFunction from './components/MxGraphFunction';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <MyMxGraph></MyMxGraph>
-      </header>
+      <MxGraphClass></MxGraphClass>
+      <MxGraphFunction></MxGraphFunction>
     </div>
   );
 }

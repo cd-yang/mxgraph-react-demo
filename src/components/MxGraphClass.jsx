@@ -1,3 +1,4 @@
+// ref: https://stackoverflow.com/questions/59893409/getting-mxgraph-hello-world-example-working-in-react
 /* eslint-disable no-useless-constructor */
 /* eslint-disable no-unused-vars */
 import React from "react"
@@ -11,7 +12,7 @@ var mxnspaceobj = require("mxgraph")({
 // mxnspaceobj, although we can use any valid name. We will use this object,
 // including when calling mxGraph constructor.
 
-export default class MyMxGraph extends React.Component {
+export default class MxGraphClass extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -54,7 +55,7 @@ export default class MyMxGraph extends React.Component {
     render() {
         return (
             <div id="mxcontainer" style={{ height: "400px", width: "1200px" }}>
-                <h3>Created using mxgraph</h3>
+                <h3>Created using MxGraphClass</h3>
             </div>
         );
     }
