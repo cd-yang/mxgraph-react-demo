@@ -8,9 +8,9 @@ const mx = require('mxgraph')({
 const { mxGraph } = mx;
 
 function MxGraphFunction() {
-    let graph = null;
 
     const containerRef = useCallback(node => {
+        let graph = null;
         if (node !== null) {
             graph = new mxGraph(node);
             const parent = graph.getDefaultParent()
@@ -26,7 +26,7 @@ function MxGraphFunction() {
     }, []);
 
     return (
-        <div ref={containerRef} style={{ height: "400px", width: "1200px" }}>
+        <div ref={containerRef} style={{ height: "400px", width: "400px", borderStyle: "groove" }}>
             <h3>Created using MxGraphFunction</h3>
         </div>
     );

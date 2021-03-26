@@ -25,6 +25,7 @@ export default class MxGraphClass extends React.Component {
         let mxEvent = mxnspaceobj.mxEvent
 
         const container = document.querySelector("#mxcontainer")
+        container.style.background = "grid.gif";
 
         // Now, the tricky one, because most examples codes directly use the 
         // following statement :
@@ -34,6 +35,8 @@ export default class MxGraphClass extends React.Component {
         // Instead, we have to call the mxGraph constructor via mxnspaceobj
         // variable as follows :
         let graph = new mxnspaceobj.mxGraph(container);
+        graph.setBorder(1);
+        graph.background = "grid.gif";
 
         // -- The rest is the same as usually found in examples -- //
 
@@ -54,7 +57,8 @@ export default class MxGraphClass extends React.Component {
 
     render() {
         return (
-            <div id="mxcontainer" style={{ height: "400px", width: "1200px" }}>
+            <div id="mxcontainer" style={{ height: "400px", width: "400px", borderStyle: "groove" }}>
+                {/* , borderStyle: "groove"  */}
                 <h3>Created using MxGraphClass</h3>
             </div>
         );
