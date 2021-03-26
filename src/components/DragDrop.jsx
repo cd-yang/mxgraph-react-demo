@@ -14,6 +14,9 @@ var mxnspaceobj = require("mxgraph")({
 export default class DragDrop extends React.Component {
     constructor(props) {
         super(props);
+
+        this.taskRef = React.createRef();
+
         this.state = {
             graph: {},
             layout: {},
@@ -29,9 +32,7 @@ export default class DragDrop extends React.Component {
     // 在工具栏创建可拖拽的图元
     createDragElement = () => {
         const { graph } = this.state;
-        const tasksDrag = ReactDOM.findDOMNode(
-            this
-        ).querySelectorAll(".task");
+        const tasksDrag = this.taskRef.current.querySelectorAll(".task");
         Array.prototype.slice.call(tasksDrag).forEach(ele => {
             const value = ele.getAttribute("data-value");
             let ds = mxnspaceobj.mxUtils.makeDraggable(
@@ -137,7 +138,7 @@ export default class DragDrop extends React.Component {
                             <td style={{ verticalAlign: "top" }}>
                                 <ul className="sidebar">
                                     <li className="title" data-title="Task node" data-value="Task node">Task node</li>
-                                    <li className="task" data-title="Kafka->HDFS" data-value="Channel task" >rectangle</li>
+                                    <li className="task" ref={this.taskRef} data-title="Kafka->HDFS" data-value="Channel task" >rectangle</li>
                                 </ul>
                             </td>
                             <td>
