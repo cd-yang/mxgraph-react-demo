@@ -4,6 +4,7 @@ import MxGraphClass from './components/MxGraphClass';
 import MxGraphFunction from './components/MxGraphFunction';
 import DragDrop from './components/DragDrop';
 import DragDropOfficial from './components/DragDropOfficial';
+import WebSocketConnection from './components/WebSocketConnection';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <MxGraphFunction></MxGraphFunction>
       <DragDrop />
       <DragDropOfficial />
+      <WebSocketConnection />
     </div>
   );
 }
