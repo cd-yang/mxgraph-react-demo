@@ -93,7 +93,7 @@ export default class DragDrop extends React.Component {
                 // dragElt: this.getEditPreview()
             },
             () => {
-                console.log(this);
+                // console.log(this);
                 // this.loadGlobalSetting();
                 // this.setGraphSetting();
                 // this.settingConnection();
