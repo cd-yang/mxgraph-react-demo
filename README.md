@@ -12,8 +12,7 @@ Some attempts to integrate mxGraph into a React app.
 
 ### `npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install dependencies.
 
 
 ### `npm run start`
