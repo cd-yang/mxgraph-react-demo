@@ -33,15 +33,21 @@ function WebSocketConnection() {
 
         let toolbar = createToolbar(toolbarRef);
         let graph = createCanvas(canvasRef, toolbar);
+        graph.addListener(mxEvent.ADD_CELLS, addCellsHandler);
         graph.addListener(mxEvent.CELLS_ADDED, cellsAddedHandler);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const cellsAddedHandler = (mxGraph, event) => {
+    const addCellsHandler = (mxGraph, event, arg) => {
+        console.log(`addCells, cells: ${JSON.stringify(event.properties.cells[0].id)}`);
+    }
+
+    const cellsAddedHandler = (mxGraph, event, arg) => {
+        console.log(`cellsAdded, cells: ${JSON.stringify(event.properties.cells[0].id)}`);
         if (client === null || client.readyState !== WebSocket.OPEN)
             return;
 
-        client.send(JSON.stringify(event));
+        client.send(event.properties.cells[0].id);
     }
 
     return (
@@ -68,3 +74,20 @@ function WebSocketConnection() {
 }
 
 export default WebSocketConnection;
+
+function simpleStringify(object) {
+    var simpleObject = {};
+    for (var prop in object) {
+        if (!object.hasOwnProperty(prop)) {
+            continue;
+        }
+        if (typeof (object[prop]) == 'object') {
+            continue;
+        }
+        if (typeof (object[prop]) == 'function') {
+            continue;
+        }
+        simpleObject[prop] = object[prop];
+    }
+    return JSON.stringify(simpleObject); // returns cleaned up JSON
+};
