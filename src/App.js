@@ -5,6 +5,8 @@ import MxGraphFunction from './components/MxGraphFunction';
 import DragDrop from './components/DragDrop';
 import DragDropOfficial from './components/DragDropOfficial';
 import WebSocketConnection from './components/WebSocketConnection';
+import LargeDiagramExport from './components/LargeDiagramExport';
+import LargeDiagramImport from './components/LargeDiagramImport';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <DragDrop />
       <DragDropOfficial />
       <WebSocketConnection />
+      {/* <LargeDiagramExport /> */}
+      <LargeDiagramImport />
     </div>
   );
 }
