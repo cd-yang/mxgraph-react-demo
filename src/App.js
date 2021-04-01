@@ -16,7 +16,7 @@ function App() {
       <DragDrop />
       <DragDropOfficial />
       <WebSocketConnection />
-      {/* <LargeDiagramExport /> */}
+      <LargeDiagramExport />
       <LargeDiagramImport />
     </div>
   );

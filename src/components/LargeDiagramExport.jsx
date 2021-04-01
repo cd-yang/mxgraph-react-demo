@@ -1,4 +1,4 @@
-// ref: https://segmentfault.com/a/1190000021357051
+// ref: http://127.0.0.1:5500/javascript/examples/jsondata.html
 // 从js代码绘制 3000 个图元，页面加载约2.3秒
 import React, { useCallback } from 'react';
 
@@ -50,7 +50,7 @@ function LargeDiagramExport() {
             <h3>Large diagram export</h3>
             <button onClick={generate}>generate</button>
             <button onClick={exportToXml}>export to xml</button>
-            <div ref={containerRef} className="canvas" style={{ height: "400px", width: "400px" }} />
+            <div ref={containerRef} className="canvas" style={{ height: "300px", width: "200px" }} />
         </div>
     );
 }

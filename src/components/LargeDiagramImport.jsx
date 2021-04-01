@@ -1,4 +1,4 @@
-// ref: https://segmentfault.com/a/1190000021357051
+// ref: http://127.0.0.1:5500/javascript/examples/codec.html
 // 从 xml 加载视图，页面加载约2.4秒
 import React, { useCallback } from 'react';
 
@@ -49,7 +49,7 @@ function LargeDiagramImport() {
         <div style={{ height: "400px", width: "400px", borderStyle: "groove" }}>
             <h3>Large diagram import</h3>
             <button onClick={load}>load</button>
-            <div ref={containerRef} className="canvas" style={{ height: "400px", width: "400px" }} />
+            <div ref={containerRef} className="canvas" style={{ height: "300px", width: "200px" }} />
         </div>
     );
 }
