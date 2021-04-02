@@ -8,6 +8,7 @@ import WebSocketConnection from './components/WebSocketConnection';
 import LargeDiagramExport from './components/LargeDiagramExport';
 import LargeDiagramImport from './components/LargeDiagramImport';
 import CustomShape from './components/CustomShape';
+import CustomHandles from './components/CustomHandles';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <LargeDiagramExport />
       <LargeDiagramImport />
       <CustomShape />
+      <CustomHandles />
     </div>
   );
 }
