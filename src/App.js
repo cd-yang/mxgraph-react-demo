@@ -7,6 +7,7 @@ import DragDropOfficial from './components/DragDropOfficial';
 import WebSocketConnection from './components/WebSocketConnection';
 import LargeDiagramExport from './components/LargeDiagramExport';
 import LargeDiagramImport from './components/LargeDiagramImport';
+import CustomShape from './components/CustomShape';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <WebSocketConnection />
       <LargeDiagramExport />
       <LargeDiagramImport />
+      <CustomShape />
     </div>
   );
 }
