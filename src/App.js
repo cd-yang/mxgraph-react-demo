@@ -12,8 +12,8 @@ import CustomShape from './components/CustomShape';
 function App() {
   return (
     <div className="App">
-      <MxGraphClass></MxGraphClass>
-      <MxGraphFunction></MxGraphFunction>
+      <MxGraphClass />
+      <MxGraphFunction />
       <DragDrop />
       <DragDropOfficial />
       <WebSocketConnection />

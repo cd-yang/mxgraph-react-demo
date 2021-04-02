@@ -21,12 +21,12 @@ function CustomShape() {
     }, []);
 
     const load = () => {
-        const parent = graph.getDefaultParent()
-        graph.getModel().beginUpdate()
+        const parent = graph.getDefaultParent();
+        graph.getModel().beginUpdate();
         try {
-            const v1 = graph.insertVertex(parent, null, 'vertex 1', 0, 0, 80, 50)
-            const v2 = graph.insertVertex(parent, null, 'vertex 2', 100, 0, 80, 20)
-            graph.insertEdge(parent, null, '', v1, v2)
+            const v1 = graph.insertVertex(parent, null, 'vertex 1', 0, 0, 80, 50);
+            const v2 = graph.insertVertex(parent, null, 'vertex 2', 100, 0, 80, 60, 'shape=label;spacingBottom=10;fillColor=#adc5ff;gradientColor=#7d85df;glass=1;rounded=1;shadow=1;');
+            graph.insertEdge(parent, null, 'edge label', v1, v2);
         } finally {
             graph.getModel().endUpdate();
         }
